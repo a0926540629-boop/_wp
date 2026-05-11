@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>會員註冊表單</title>
+    <!-- 引入我们的样式文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>會員註冊表單</h2>
+        <!-- 表单开始 -->
+        <form action="#" method="post">
+            <!-- 1. 文字输入框（账号） -->
+            <div class="form-group">
+                <label for="username">帳號：</label>
+                <input type="text" id="username" name="username" required placeholder="請輸入帳號">
+            </div>
+
+            <!-- 2. 密码输入框 -->
+            <div class="form-group">
+                <label for="password">密碼：</label>
+                <input type="password" id="password" name="password" required placeholder="請輸入密碼">
+            </div>
+
+            <!-- 3. 邮箱输入框 -->
+            <div class="form-group">
+                <label for="email">Email：</label>
+                <input type="email" id="email" name="email" placeholder="請輸入電子郵件">
+            </div>
+
+            <!-- 4. 单选按钮（性别） -->
+            <div class="form-group">
+                <label>性別：</label>
+                <label class="radio-label">
+                    <input type="radio" name="gender" value="male"> 男
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="gender" value="female"> 女
+                </label>
+            </div>
+
+            <!-- 5. 复选框（兴趣） -->
+            <div class="form-group">
+                <label>興趣：</label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="hobby" value="game"> 遊戲
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="hobby" value="movie"> 電影
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="hobby" value="music"> 音樂
+                </label>
+            </div>
+
+            <!-- 6. 下拉菜单（年龄） -->
+            <div class="form-group">
+                <label for="age">年齡層：</label>
+                <select id="age" name="age">
+                    <option value="">請選擇年齡層</option>
+                    <option value="1">18歲以下</option>
+                    <option value="2">18-30歲</option>
+                    <option value="3">31-45歲</option>
+                    <option value="4">46歲以上</option>
+                </select>
+            </div>
+
+            <!-- 7. 多行文本框（自我介绍） -->
+            <div class="form-group">
+                <label for="intro">自我介紹：</label>
+                <textarea id="intro" name="intro" rows="4" placeholder="簡單介紹一下自己"></textarea>
+            </div>
+
+            <!-- 8. 提交按钮 -->
+            <button type="submit" class="submit-btn">送出註冊</button>
+        </form>
+    </div>
+</body>
+</html>
