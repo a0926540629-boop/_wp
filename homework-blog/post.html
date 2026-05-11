@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>文章頁</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    a { color: #007bff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a href="index.html">← 回到首頁</a>
+  <h1 id="post-title"></h1>
+  <div id="post-content"></div>
+
+  <script>
+    // 模擬資料庫文章內容
+    const posts = {
+      1: { title: "第一篇文章：Hello World", content: "這是我的第一篇部落格文章！歡迎來到我的網站。" },
+      2: { title: "第二篇文章：JavaScript 基礎", content: "今天學了 JavaScript 的函數與參數，感覺很有收穫。" }
+    };
+
+    // 從 URL 取文章 ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get("id");
+    const post = posts[postId];
+
+    if (post) {
+      document.getElementById("post-title").textContent = post.title;
+      document.getElementById("post-content").textContent = post.content;
+    } else {
+      document.body.innerHTML = "<h1>文章不存在</h1><a href='index.html'>回到首頁</a>";
+    }
+  </script>
+</body>
+</html>
