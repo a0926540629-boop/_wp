@@ -78,3 +78,4 @@ function calculateTotal(cart, discountFunc) {
 const cart = [100, 200, 300];
 const finalPrice = calculateTotal(cart, total => total - 50);
 console.log(finalPrice); // 550
+
